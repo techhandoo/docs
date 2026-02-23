@@ -1,0 +1,119 @@
+ A. Functional Requirement Questions (Must ask)
+1. User & Roles
+
+How many users?
+What departments? (Purchase, Inventory, Production, Finance, QA, etc.)
+What roles and permissions are needed?
+Any approval hierarchy? (e.g., Purchase order → Manager approval)
+
+2. Plant Structure
+
+Number of plants
+Different warehouses?
+Any inter‑plant transfer rules?
+
+3. Item & BOM Rules
+
+Multi-level BOM or single level?
+BOM revisions allowed?
+Need routing and operations?
+Costing method (FIFO, LIFO, Weighted Average)?
+
+4. Purchase
+
+PO approval workflows?
+Vendor rating system?
+GRN tolerances (% difference allowed)?
+
+5. Inventory
+
+Batch no. rules?
+Expiry control required?
+Do they use barcodes or QR codes?
+
+6. Sales & Production
+
+Need MRP?
+Work orders auto-generated or manual?
+Do they have machine capacity data?
+
+7. QMS / CAPA / NCR / BD
+
+Are they following ISO 9001, GMP, FDA, ISO 14001?
+What QMS forms/templates they currently fill manually?
+Required workflows and approval chains?
+
+8. OEE
+
+List of machines
+PLC/SCADA access available?
+Do they give real-time signals?
+Do machines support OPC-UA or need IoT gateway?
+
+9. Finance
+
+Chart of accounts format?
+Do they need Tally/SAP integration?
+Financial year structure?
+
+10. AI
+
+What predictions do they expect?
+Do they have past quality data, production logs, machine data?
+Are AI recommendations auto or suggestion-based?
+
+
+📌 B. Technical Requirement Questions
+1. Hosting Preference
+
+Cloud? (Azure / AWS / GCP)
+On-premise?
+Do they have their own servers?
+
+2. Database Ownership
+Ask them:
+
+“Do you want the database on your cloud subscription or ours?”
+
+3. Security Requirements
+
+SSO required?
+Password policy?
+2FA needed?
+Data residency rules?
+
+4. API Requirements
+
+Any third‑party system to integrate?
+
+Tally
+SAP
+MS Dynamics
+Zoho
+CRM
+Weighing scale
+Biometric
+Machine PLC
+
+
+
+5. Logging & Audit
+Most ERP clients need:
+
+Who changed what
+Timestamp logs
+Old value → new value tracking
+SLA-based log retention
+
+6. Backup Requirements
+Daily / hourly?
+Retention for 1 month / 1 year?
+
+📌 C. Deployment/Implementation Questions
+
+Does the client require mobile app?
+Need offline mode?
+Do they need multi‑language support?
+Performance expectations (max concurrent users)?
+Reporting format (Excel, PDF, dashboards)?
+
