@@ -1,0 +1,290 @@
+.1 User Count
+
+How many total users will use the system?
+Expected concurrent users?
+
+1.2 Roles & Permissions
+
+List all user roles (e.g. Admin, Manager, Operator, Finance, QA, etc.)
+Does each plant have separate roles or shared roles?
+Do roles vary by department?
+Should permissions be module-based or action-based?
+
+1.3 Approval Workflow
+
+Which actions require approvals?
+
+Purchase Requisition approval?
+Purchase Order approval?
+Work Order approval?
+QC rejection approval?
+
+
+How many approval levels? (L1 → L2 → L3)
+
+
+🏭 2. Plant, Warehouse & Machine Information
+2.1 Plant Structure
+
+Number of plants?
+Locations of the plants?
+Do different plants operate independently?
+
+2.2 Warehouse Structure
+
+Number of warehouses per plant?
+Is inter‑warehouse transfer allowed?
+
+2.3 Machines (For OEE)
+
+Number of machines?
+Machine names, machine codes?
+Machine types?
+Do machines support PLC/SCADA/OPC-UA?
+Is real-time machine data available?
+Do you have IoT gateway hardware?
+
+
+📦 3. Item, BOM & Production Requirements
+3.1 Item Master
+
+Item types? (Raw Material, WIP, Finished Goods)
+Do items need batch/lot tracking?
+Do items need expiry date?
+
+3.2 BOM (Bill of Materials)
+
+Will you use:
+
+Single-Level BOM?
+Multi-Level BOM?
+
+
+Do you need revision control for BOM?
+Do you require routing/operations?
+
+3.3 Production Process
+
+Do you need MRP (Material Requirement Planning)?
+Should WOs be auto-created from Sales Orders?
+Do you need job cards for each operation?
+
+
+🛒 4. Purchase Requirements
+4.1 Purchasing Workflow
+
+Do Purchase Requisitions exist?
+Does PR → PO approval flow exist?
+PO tolerance limits? (e.g. ±5%)
+
+4.2 Vendor Management
+
+Do vendors require rating/score?
+Do you need vendor document storage?
+
+
+📦 5. Inventory Requirements
+5.1 Tracking
+
+Batch-based or non-batch?
+Do you want barcode/QR code printing?
+Do you need stock aging?
+
+5.2 Inventory Transactions
+
+Supported transactions:
+
+GRN
+Issue
+Return
+Transfer
+Adjustment
+
+
+
+5.3 Reporting
+
+FIFO, LIFO, Weighted Average?
+Stock valuation—how should it be calculated?
+
+
+📈 6. Sales Requirements
+6.1 Sales Modules
+
+Do you need:
+
+Sales Inquiry?
+Quotation?
+Sales Order?
+Delivery Challan?
+
+
+Should deliveries reduce stock automatically?
+
+
+🔍 7. Quality Management Requirements (QMS)
+7.1 Inspection Points
+
+Incoming inspection?
+In-process inspection?
+Final QC?
+
+7.2 QC Parameters
+
+Do you have templates for:
+
+Sampling?
+Tests?
+Measurements?
+
+
+
+7.3 COA/COC
+
+Do you want Certificates of Analysis auto-generated?
+
+
+🟥 8. CAPA / NCR / BD Requirements
+8.1 NCR (Non-Conformance Report)
+
+When should NCR be triggered?
+Severity levels needed?
+
+8.2 CAPA
+
+Workflow requirements?
+Attachments/evidence required?
+
+8.3 BD (Breakdown / Business Deviation)
+
+What events count as BD?
+Do you need downtime tracking?
+
+
+⚙️ 9. OEE Requirements
+9.1 Machine Data
+
+Real-time integration or manual entry?
+Do you have cycle time data?
+Downtime reason codes?
+
+9.2 Dashboard Needs
+
+OEE breakdown by:
+
+Machine
+Shift
+Operator
+
+
+
+
+💰 10. Finance Module Requirements
+10.1 Accounting Structure
+
+Chart of Accounts provided?
+Cost centers required?
+
+10.2 Integrations
+
+Should ERP integrate with:
+
+Tally?
+SAP?
+Any bank systems?
+
+
+
+10.3 Financial Reports
+
+Required:
+
+Trial Balance
+P&L
+Balance Sheet
+Ledger Register
+
+
+
+
+🤖 11. AI Module Requirements
+11.1 Predictions Needed
+
+Demand forecasting?
+Inventory optimization?
+Machine failure prediction?
+Production delay prediction?
+Quality anomaly detection?
+
+11.2 AI Training Data
+
+Do you have past:
+
+QC data?
+Production logs?
+Machine downtime data?
+Sales data?
+
+
+
+
+🛠 12. Technical Requirements
+12.1 Hosting
+
+Cloud or On-Prem?
+Preferred provider? (AWS/Azure/GCP)
+
+12.2 Database Ownership
+
+Should DB be hosted on client’s cloud or developer’s cloud?
+Backup frequency?
+
+12.3 Security
+
+Password policy?
+Do you need 2FA?
+Do you need SSO (e.g., Microsoft/Google login)?
+
+12.4 Audit Requirements
+
+Track all CRUD operations?
+Track login attempts?
+Track approval workflows?
+
+
+🔗 13. Integration Requirements
+13.1 Do you need integration with:
+
+Tally?
+SAP?
+CRM?
+Weighing scale?
+Barcode printers?
+Biometric device?
+PLC/SCADA (for OEE)?
+
+
+📤 14. Document Requirements
+14.1 Document Uploads
+
+Allowed document types?
+Max file size?
+Should files be stored in:
+
+S3?
+Local server?
+
+
+
+14.2 Export requirements
+
+PDF?
+Excel?
+CSV?
+
+
+🗓 15. Other Business Requirements
+15.1 Multi-language support?
+15.2 Mobile app required?
+15.3 Dark mode required?
+15.4 SLA expectations?
